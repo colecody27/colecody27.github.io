@@ -93,6 +93,7 @@
 <style>
     .projectSection{
         margin-bottom: 20%;
+        font-family: "Open Sans",sans-serif;
         
     }
     .projects{

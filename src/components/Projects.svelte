@@ -93,10 +93,11 @@
 <style>
     .projectSection{
         margin-bottom: 20%;
-        font-family: "Open Sans",sans-serif;
+
         
     }
     .projects{
+        font-family: "Open Sans",sans-serif;
         max-width: 1000px;
         margin-left: 20px;
         margin:auto;

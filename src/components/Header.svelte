@@ -1,21 +1,34 @@
 <script>
     import { animateScroll } from 'svelte-scrollto-element';
+    
+    let innerWidth = 0; 
+
     function scrollIntoView({ target }) {
         const el = document.querySelector(target.getAttribute('href'));
         if (!el) return;
         el.scrollIntoView({behavior: 'smooth'});
     }
+
+
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class="header">
     <div class="name"> CC </div>
     <div class = "navbar">
-        <ul class = "navbarLinks">
-            <li id = 'about'><a href = "#about" on:click = {() => animateScroll.scrollToTop({offset: 500})} > About</a></li>
-            <li id = 'projects'><a href = "#projects" on:click = {() => animateScroll.scrollToTop({offset: 2000})}> Projects</a></li>
-            <li id = 'connect'><a href = "#contact" on:click = {() => animateScroll.scrollToBottom()}> Contact</a></li>
-            <li class = 'resume'><a href="https://drive.google.com/file/d/19zoxScu72WodWbRySdFJUgOCloFwLYX0/view?usp=sharing">Resume</a></li>
-        </ul>
+        {#if innerWidth > 660}
+            <ul class = "navbarLinks">
+                <li id = 'about'><a href = "#about" on:click = {() => animateScroll.scrollToTop({offset: 500})} > About</a></li>
+                <li id = 'projects'><a href = "#projects" on:click = {() => animateScroll.scrollToTop({offset: 2000})}> Projects</a></li>
+                <li id = 'connect'><a href = "#contact" on:click = {() => animateScroll.scrollToBottom()}> Contact</a></li>
+                <li class = 'resume'><a href="https://drive.google.com/file/d/19zoxScu72WodWbRySdFJUgOCloFwLYX0/view?usp=sharing">Resume</a></li>
+            </ul>
+        {:else}
+            <ul class = "navbarLinks">
+                <li class = 'resume'><a href="https://drive.google.com/file/d/19zoxScu72WodWbRySdFJUgOCloFwLYX0/view?usp=sharing">Resume</a></li>
+            </ul>
+        {/if}
     </div>
 </div>
 
@@ -28,11 +41,11 @@
         font-size: 25px ;
         font-weight: bolder;
         color: #8dc6ff;
-        position:fixed;
         top: 0;
         background-color: #240747;
         background-image: linear-gradient(to left, #240747, #3e1c68);
         z-index: 1;
+        border-bottom: #8dc6ff solid;
     }
     .name{
         transition: .5s;

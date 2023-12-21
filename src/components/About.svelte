@@ -5,26 +5,32 @@
     <div class="title">
         <h1>About Me</h1>
     </div>
+
     <div class="container">
-        <div class="description">
-            <h3>I am an Army veteran currently in my third year of pursuing my bachelors in computer science. 
-            I am originally from Florida and enlisted in the Army after graduating high school and spent 9 
-            months in South Korea. I have had two internships, one at the SEC and the other at
-            NAWCWD as well as an academic experience with NASA. In my free time I enjoy jiu jitsu and playing chess. </h3>
-        </div>
-        
         <div class="picture">
             <img src="/images/bananastand.png" alt="">
         </div>
+
+        <div class="description">
+            <h3>I am an Army veteran currently in my last year of pursuing my bachelors in computer science. 
+            I am originally from Florida and enlisted in the Army after graduating high school. I've had three internships,
+            one at Amazon Web Services, the Securites and Exchange Commission, and the Naval Air Warfare Center Weapons Division,
+            as well as an academic experience with NASA. In my free time I enjoy jiu jitsu and playing chess.
+            </h3>
+        </div>
+
     </div>
-
-
 </div>
+<div class="spacer"></div>
 
 <style>
+    .spacer{
+        height: 15vh;
+    }
     .about{
         font-family: "Open Sans",sans-serif;
-        margin-bottom: 30%;
+        max-width: 1600px;
+        margin:auto;
     }
     .title{
         text-align: center;
@@ -33,19 +39,19 @@
     }
     .container{
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
         border-style:solid;
         border-radius: 5px;
         padding: 30px 10px 10px 10px;
         box-shadow: 0px 0px 15px #fbfbfb inset;   
+        
     }
     .description{
         max-width: 40em;
-        margin-right: 100px;
     }
     h1{
         font-size: 60px;
-
     }
     h3{
         text-align: center;

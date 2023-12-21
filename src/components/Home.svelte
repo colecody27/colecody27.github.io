@@ -33,6 +33,7 @@
    setInterval(changeBorder, 100, borderBound);
 
 </script>
+<div class = "home-before"></div>
 
 <div class="home" style = "--box-shadow: {borderBound.toString() + 'px'};">
     <div class="intro">
@@ -42,6 +43,7 @@
         <h3><a class = 'continue' href = "" on:click = {() => animateScroll.scrollToTop({offset: 500})}>Learn More</a></h3>
     </div>
 </div>
+<div class = "home-before"></div>
 
 <style>
     .home{
@@ -52,11 +54,13 @@
         border-radius: 100px;
         width: fit-content;
         margin:auto;
-        margin-bottom: 40%;
-        margin-top: 10%;
+
         padding: 10px 0px 10px 20px;
         box-shadow: 0 0 var(--box-shadow) #8dc6ff;
         transition: .1s smooth;
+    }
+    .home-before{
+        height: 15vh;
     }
     .intro{
         max-width: 50em;

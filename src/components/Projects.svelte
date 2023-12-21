@@ -5,17 +5,42 @@
     </div>
 
     <!--Projects-->
-    <div class="projects">
+    <div id = "projects" class="projects">
         <div class="project">
-            <a href="https://github.com/colecody27/CCole_SortComparison_F20">
-                <h3 class = 'title'>Sort Comparison<img class = "github" src="/images/github.png" alt=""></h3>
+            <a href="https://github.com/colecody27/CPSC471_FTP">
+                <h3 class = 'title'>Client-Server FTP<img class = "github" src="/images/github.png" alt=""></h3>
                 <h4 class = 'description'>
-                    Three self developed sorting algorithms: insertion, quick, and merge sort. 
+                    This program allows for FTP data transfer using python sockets to form a TCP connection between a server and client.
                 </h4>
                 <ul class = 'skills'>
-                    <li>Java</li>
-                    <li>Time & Space Complexity</li>
-                    <li>Data Structures</li>
+                    <li>Python</li>
+                    <li>Socket Programming</li>
+                </ul>
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://github.com/angyb00/Parallel-Sorting">
+                <h3 class = 'title'>Parallel Sorting<img class = "github" src="/images/github.png" alt=""></h3>
+                <h4 class = 'description'>
+                    Compare the runtimes of parallel and sequential sorting algorithms using openMP and python.  
+                </h4>
+                <ul class = 'skills'>
+                    <li>Python</li>
+                    <li>openMP</li>
+                    <li>Algorithms</li>
+                </ul>
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://github.com/colecody27/CUDA-MATRIX">
+                <h3 class = 'title'>CUDA Matrix<img class = "github" src="/images/github.png" alt=""></h3>
+                <h4 class = 'description'>
+                    CUDA program that instantiates a random array of NxN size and calculates it's square
+                </h4>
+                <ul class = 'skills'>
+                    <li>C++</li>
+                    <li>CUDA</li>
+                    <li>Linear Algebra</li>
                 </ul>
             </a>
         </div>
@@ -29,33 +54,6 @@
                     <li>Java</li>
                     <li>Parsers</li>
                     <li>Compilers</li>
-                </ul>
-            </a>
-        </div>
-        <div class="project">
-            <a href="https://github.com/colecody27/Data_Structs">
-                <h3 class = 'title'>DS Visualizer<img class = "github" src="/images/github.png" alt=""></h3>
-                <h4 class = 'description'>
-                    Website that visualizes the functionality of data structures: Linked list and Stacks. 
-                </h4>
-                <ul class = 'skills'>
-                    <li>Javascript</li>
-                    <li>HTML & CSS</li>
-                    <li>Data Structures</li>
-                </ul>
-            </a>
-        </div>
-        <div class="project">
-            <a href="https://github.com/Saul385/CtrlHabits.com">
-                <h3 class = 'title'>CtrlHabits.com<img class = "github" src="/images/github.png" alt=""></h3>
-                <h4 class = 'description'>
-                    A web application that merges social media and productivity
-                    enabling users to connect and observe the progress of their goals and friends.
-                </h4>
-                <ul class = 'skills'>
-                    <li>Sveltekit</li>
-                    <li>Firebase</li>
-                    <li>Web Design</li>
                 </ul>
             </a>
         </div>
@@ -97,7 +95,10 @@
         
     }
     .projects{
-
+        border-style:solid;
+        border-radius: 5px;
+        padding: 30px 10px 10px 10px;
+        box-shadow: 0px 0px 15px #fbfbfb inset;   
         max-width: 1000px;
         margin-left: 20px;
         margin:auto;

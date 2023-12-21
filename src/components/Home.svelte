@@ -1,6 +1,7 @@
 <script>
     import {fade, fly} from 'svelte/transition';
     import {tweened} from 'svelte/motion';
+    import { animateScroll } from 'svelte-scrollto-element';
     let titles = ['Software Engineer', 'SDE Intern @ AWS', 'Army Veteran', 'Student']
     let titleIndex = 0; 
     let title = titles[titleIndex];
@@ -18,11 +19,6 @@
     }
     setInterval(switchTitle, 3000, titleIndex);
     
-
-    const scrollToAbout = () => {
-        scrollTo(0, 1000);
-   }
-
    const changeBorder = () => {
     if(borderBound == 45)
         increase = false;
@@ -40,21 +36,12 @@
 
 <div class="home" style = "--box-shadow: {borderBound.toString() + 'px'};">
     <div class="intro">
-        <h1>
-            {#if titleIndex == 0 || titleIndex == 3 || titleIndex == 1}
-                <h1 class = 'title'> I'm a {title} </h1> 
-            {:else}
-                <h1 class = 'title'>I'm an {title}</h1>
-            {/if}  
-        </h1>
+        <h1 class = 'title'> {title} </h1> 
          
         <h3> Interested in developing and implementing efficient solutions to real world problems.</h3>
-        <h3><a class = 'continue' href = "" on:click = {scrollToAbout}>Learn More</a></h3>
+        <h3><a class = 'continue' href = "" on:click = {() => animateScroll.scrollToTop({offset: 500})}>Learn More</a></h3>
     </div>
 </div>
-
-
-
 
 <style>
     .home{
@@ -69,7 +56,7 @@
         margin-top: 10%;
         padding: 10px 0px 10px 20px;
         box-shadow: 0 0 var(--box-shadow) #8dc6ff;
-        transition: .1s;
+        transition: .1s smooth;
     }
     .intro{
         max-width: 50em;

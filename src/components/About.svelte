@@ -1,7 +1,7 @@
 
 
 
-<div class="about">
+<div id = "about" class="about">
     <div class="title">
         <h1>About Me</h1>
     </div>
@@ -14,7 +14,7 @@
         </div>
         
         <div class="picture">
-            <img src="/images/selfie.jpg" alt="">
+            <img src="/images/bananastand.png" alt="">
         </div>
     </div>
 
@@ -34,6 +34,10 @@
     .container{
         display: flex;
         justify-content: center;
+        border-style:solid;
+        border-radius: 5px;
+        padding: 30px 10px 10px 10px;
+        box-shadow: 0px 0px 15px #fbfbfb inset;   
     }
     .description{
         max-width: 40em;
@@ -46,7 +50,7 @@
     h3{
         text-align: center;
         font-size: 20px;
-        color: #8dc6ff;
+        color: #bae8e8;
     }
     img{
         width: 400px;

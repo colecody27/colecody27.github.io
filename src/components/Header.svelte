@@ -1,38 +1,21 @@
 <script>
-    /*ToDo
-        *Smooth scrolling
-
-    */
-
-   const scrollToAbout = () => {
-    scrollTo(0, 1000);
-    //getElementById("about").scrollIntoView();
-   }
-   const scrollToProjects = () => {
-    //document.getElementById("projects").scrollIntoView();
-    scrollTo(0, 2000);
-   }
-   const scrollToConnect = () => {
-    window.scrollTo(0,5000);
-    window.scrollTo({
-        behavior: "smooth",
-    });
-   }
-
+    import { animateScroll } from 'svelte-scrollto-element';
+    function scrollIntoView({ target }) {
+        const el = document.querySelector(target.getAttribute('href'));
+        if (!el) return;
+        el.scrollIntoView({behavior: 'smooth'});
+    }
 </script>
 
 <div class="header">
-    <div class="name">
-        CC
-    </div>
+    <div class="name"> CC </div>
     <div class = "navbar">
         <ul class = "navbarLinks">
-            <li id = 'about'><a href = "" on:click = {scrollToAbout} >About</a></li>
-            <li id = 'projects'><a href = "" on:click = {scrollToProjects}>Projects</a></li>
-            <li id = 'connect'><a href = "" on:click = {scrollToConnect}>Contact</a></li>
+            <li id = 'about'><a href = "#about" on:click = {() => animateScroll.scrollToTop({offset: 500})} > About</a></li>
+            <li id = 'projects'><a href = "#projects" on:click = {() => animateScroll.scrollToTop({offset: 2000})}> Projects</a></li>
+            <li id = 'connect'><a href = "#contact" on:click = {() => animateScroll.scrollToBottom()}> Contact</a></li>
             <li class = 'resume'><a href="https://drive.google.com/file/d/19zoxScu72WodWbRySdFJUgOCloFwLYX0/view?usp=sharing">Resume</a></li>
         </ul>
-
     </div>
 </div>
 
@@ -55,12 +38,13 @@
         transition: .5s;
         border-style:solid;
         border-radius: 70px;
-        padding: 17px 10px 10px 10px;
+        padding: 20px 20px 20px 20px;
         box-shadow: 0px 0px 10px #8dc6ff;
     }
 
     .name:hover{
-        padding: 20px 20px 20px 20px;
+        box-shadow: 0px 0px 20px #8dc6ff;
+        transition: .7s;
     }
 
     .navbar{

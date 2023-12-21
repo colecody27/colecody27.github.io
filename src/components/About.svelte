@@ -59,8 +59,10 @@
         color: #bae8e8;
     }
     img{
-        width: 400px;
-        height: 400px;
+        width: 60vw;
+        height: 30vh;
+        max-height: 400px;
+        max-width: 400px;
         object-fit: cover;
         border-radius: 20px;
         box-shadow: 0px 0px 10px #8dc6ff;

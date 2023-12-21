@@ -35,25 +35,14 @@
         padding-left: 0;
         margin-bottom: 0;
     }
-
-    .right{
-        margin-bottom: 10px;
-        list-style: none;
-    }
-    .email{
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        height: 100px;
-        width: 20px;
-        
-        color: #8dc6ff;
-    }
     .logos{
         list-style: none;
     } 
     .logo{
-        height: 40px;
-        width: 40px;
+        height:4vh;
+        width: 4vh; 
+        max-height: 40px;
+        max-width: 40px;
         border-radius: 100px;
         margin-bottom: 20px;
         filter: invert(100%);
@@ -66,7 +55,7 @@
     }
     .littleLine{
         border-left: 2px solid white;
-        height: 150px;
+        height: 10vw;
 
     }
 

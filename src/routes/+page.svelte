@@ -50,7 +50,7 @@
     let myinterval = setInterval(colorChange, 10);
 
     //Call for stoppage of colorChange and remove preloader
-    setTimeout(stopPreload, 3000);
+    setTimeout(stopPreload, 2000);
 
 </script>
 

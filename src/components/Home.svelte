@@ -54,7 +54,6 @@
         border-radius: 100px;
         width: fit-content;
         margin:auto;
-
         padding: 10px 0px 10px 20px;
         box-shadow: 0 0 var(--box-shadow) #8dc6ff;
         transition: .1s smooth;
@@ -70,6 +69,7 @@
 
     h1{
         text-align: center;
+        min-height: 140px;
         font-size: 60px;
     }
     h3{

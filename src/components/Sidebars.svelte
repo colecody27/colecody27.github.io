@@ -48,7 +48,7 @@
         filter: invert(100%);
         transition: .5s;
         border-style: solid;
-        border-color: aliceblue;
+        border-color: black;
     }
     .logo:hover{
         height: 55px;

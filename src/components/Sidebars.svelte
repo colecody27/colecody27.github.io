@@ -44,6 +44,8 @@
         max-height: 40px;
         max-width: 40px;
         border-radius: 100px;
+        border-style: solid;
+        border-color: aliceblue;
         margin-bottom: 20px;
         filter: invert(100%);
         transition: .5s;

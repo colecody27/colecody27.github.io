@@ -56,11 +56,11 @@
 
 <body>
     
-    {#if visible == true}
+    <!-- {#if visible == true}
         <div id = 'preloader' out:fade = "{{duration: 1000}}" style = "--max-color: {min}; --mid-color: {mid}; --min-color: {max}; " class="preloader">
             Cody Cole 
         </div>
-    {/if}
+    {/if} -->
     <Header/>
     <Home/>
     <Sidebars/>
